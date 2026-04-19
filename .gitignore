@@ -1,0 +1,29 @@
+# .gitignore for Alsuper RRHH (Full Stack)
+
+# .NET
+bin/
+obj/
+*.user
+*.exe
+*.pdb
+*.dll
+.vs/
+.vscode/
+
+# Node / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+
+# Logs
+*.log
+
+# Databases (Local data)
+*.mdf
+*.ldf
+
+# OS
+.DS_Store
+Thumbs.db

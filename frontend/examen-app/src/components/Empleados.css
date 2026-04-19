@@ -1,0 +1,185 @@
+/* =============================================
+   Empleados Page Styles — Alsuper Light Theme
+   ============================================= */
+
+.empleados-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeIn var(--transition-slow) ease;
+}
+
+/* Header */
+.empleados-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.empleados-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-nuevo {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(227, 24, 55, 0.2);
+}
+
+.btn-nuevo:hover {
+  box-shadow: 0 8px 20px rgba(227, 24, 55, 0.3);
+}
+
+/* Toggle Switch */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-toggle input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background: #e2e8f0;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  transition: all var(--transition-fast);
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.filter-toggle input:checked + .toggle-slider {
+  background: var(--alsuper-green);
+  border-color: var(--alsuper-green);
+}
+
+.filter-toggle input:checked + .toggle-slider::after {
+  transform: translateX(18px);
+  background: white;
+}
+
+.toggle-label {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.td-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-edit {
+  background: rgba(140, 198, 63, 0.1);
+  color: #5a8a20;
+}
+
+.btn-edit:hover {
+  background: rgba(140, 198, 63, 0.2);
+  transform: scale(1.1);
+}
+
+.btn-delete {
+  background: rgba(227, 24, 55, 0.08);
+  color: #c41430;
+}
+
+.btn-delete:hover {
+  background: rgba(227, 24, 55, 0.18);
+  transform: scale(1.1);
+}
+
+/* Stats Below Table */
+.stats-footer {
+  margin-top: 32px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 32px;
+}
+
+/* Critical Warnings */
+.row-critical {
+  background: rgba(245, 158, 11, 0.03) !important;
+}
+
+.row-critical:hover {
+  background: rgba(245, 158, 11, 0.06) !important;
+}
+
+.warning-dot {
+  margin-left: 8px;
+  font-size: 0.85rem;
+  cursor: help;
+}
+
+.toggle-warning:checked {
+  background: var(--accent-warning) !important;
+  border-color: var(--accent-warning) !important;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+
+@media (max-width: 768px) {
+  .empleados-header {
+    flex-direction: column;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .td-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
